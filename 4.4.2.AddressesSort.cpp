@@ -22,6 +22,10 @@ public:
 		return city + ", " + street + ", " + std::to_string(houseNum) + ", " + std::to_string(apartmentNum);
 	}
 
+	std::string get_city() {
+		return city;
+	}
+
 private:
 	std::string city;
 	std::string street;
@@ -59,7 +63,7 @@ int main()
 
 	for (int i = 0; i < countAdd; i++) {
 		for (int j = 0; j < countAdd; j++) {
-			if (addresses[i].get_output_address() < addresses[j].get_output_address()) {
+			if (addresses[i].get_city() < addresses[j].get_city()) {
 				Addresses temp = addresses[i];
 				addresses[i] = addresses[j];
 				addresses[j] = temp;
